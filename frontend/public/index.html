@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prediksi Kelayakan Bansos</title>
+    <link rel="stylesheet" href="styles.css?v=20260614" />
+  </head>
+  <body>
+    <header class="app-header">
+      <a class="brand" href="#" aria-label="Prediksi Kelayakan Bansos">
+        <span class="brand-mark"></span>
+        <span>Bansos Vision</span>
+      </a>
+      <nav class="nav" aria-label="Navigasi utama">
+        <a href="#prediksi">Prediksi</a>
+        <a href="#hasil">Hasil</a>
+        <a href="history.html">Riwayat</a>
+      </nav>
+    </header>
+
+    <main class="app-shell" id="prediksi">
+      <section class="workspace">
+        <div class="intro">
+          <p class="eyebrow">CNN Computer Vision</p>
+          <h1>Prediksi kelayakan penerima bansos dari foto rumah</h1>
+          <p>
+            Sistem ini membantu proses verifikasi bansos dengan menganalisis kondisi
+            rumah dari gambar, lalu mengklasifikasikan apakah rumah tersebut layak
+            atau tidak layak menerima bantuan sosial.
+          </p>
+        </div>
+
+        <div class="predictor-grid">
+          <form class="predict-card" id="predictionForm">
+            <div class="card-head">
+              <div>
+                <p class="eyebrow">Input Foto</p>
+                <h2>Kondisi Rumah</h2>
+              </div>
+              <span class="model-badge">CNN</span>
+            </div>
+
+            <label class="upload-box" for="imageInput" id="uploadBox">
+              <input id="imageInput" type="file" accept="image/*" />
+              <span class="upload-icon">+</span>
+              <strong>Upload foto rumah</strong>
+              <small>Gunakan foto bagian depan atau kondisi utama rumah</small>
+              <img id="previewImage" alt="Preview gambar" />
+            </label>
+
+            <button class="button primary" type="submit">Prediksi Sekarang</button>
+            <p class="helper-text">
+              Server backend harus berjalan agar model CNN dapat memproses foto.
+            </p>
+          </form>
+
+          <section class="result-card" id="hasil" aria-live="polite">
+            <div class="card-head">
+              <div>
+                <p class="eyebrow">Output</p>
+                <h2>Hasil Prediksi</h2>
+              </div>
+              <span class="status-pill" id="statusPill">Menunggu input</span>
+            </div>
+
+            <div class="result-main">
+              <span class="result-label" id="resultLabel">Belum ada hasil</span>
+              <span class="result-confidence" id="resultConfidence">0%</span>
+            </div>
+
+            <div class="meter" aria-label="Confidence prediksi">
+              <span id="confidenceBar"></span>
+            </div>
+
+            <div class="detail-grid">
+              <div>
+                <span>Model</span>
+                <strong id="modelName">CNN Bansos Classifier</strong>
+              </div>
+              <div>
+                <span>Waktu</span>
+                <strong id="predictionTime">-</strong>
+              </div>
+              <div>
+                <span>Status</span>
+                <strong id="predictionStatus">Siap</strong>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <aside class="side-panel" id="riwayat">
+        <div class="panel-section">
+          <p class="eyebrow">Model</p>
+          <h2>Ringkasan Sistem</h2>
+          <div class="model-info">
+            <div>
+              <span>Metode</span>
+              <strong>CNN</strong>
+            </div>
+            <div>
+              <span>Input</span>
+              <strong>Foto Rumah</strong>
+            </div>
+            <div>
+              <span>Kelas</span>
+              <strong>2</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-section">
+          <p class="eyebrow">Tujuan</p>
+          <h2>Verifikasi Lebih Objektif</h2>
+          <p class="panel-copy">
+            Sistem membantu petugas menilai kelayakan bantuan secara lebih cepat,
+            konsisten, dan efisien berdasarkan visual kondisi rumah.
+          </p>
+        </div>
+
+        <div class="panel-section">
+          <p class="eyebrow">Riwayat</p>
+          <h2>Prediksi Terakhir</h2>
+          <ul class="history-list" id="historyList">
+            <li>Belum ada prediksi.</li>
+          </ul>
+          <a class="history-link" href="history.html">Lihat semua riwayat</a>
+        </div>
+      </aside>
+    </main>
+
+    <script src="/api/config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
