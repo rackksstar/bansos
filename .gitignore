@@ -7,3 +7,4 @@ history.json
 models/*.h5
 .env
 .vercel/
+hf-project-bansos/

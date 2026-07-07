@@ -1,0 +1,13 @@
+app.py
+requirements.txt
+runtime.txt
+Procfile
+railway.json
+models/
+uploads/
+history.json
+__pycache__/
+*.py[cod]
+server*.log
+server*.err
+hf-project-bansos/
