@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+server*.log
+server*.err
+uploads/
+history.json
+models/*.h5
+.env
+.vercel/

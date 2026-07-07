@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Riwayat Prediksi Bansos</title>
+    <link rel="stylesheet" href="styles.css?v=20260621" />
+  </head>
+  <body>
+    <header class="app-header">
+      <a class="brand" href="index.html" aria-label="Prediksi Kelayakan Bansos">
+        <span class="brand-mark"></span>
+        <span>Bansos Vision</span>
+      </a>
+      <nav class="nav" aria-label="Navigasi utama">
+        <a href="index.html#prediksi">Prediksi</a>
+        <a href="index.html#hasil">Hasil</a>
+        <a href="history.html" aria-current="page">Riwayat</a>
+      </nav>
+    </header>
+
+    <main class="history-page">
+      <section class="history-hero">
+        <div>
+          <p class="eyebrow">Riwayat Tersimpan</p>
+          <h1>Daftar prediksi kelayakan bansos</h1>
+          <p>
+            Semua hasil prediksi yang berhasil diproses disimpan otomatis oleh
+            server dan dapat dilihat kembali dari halaman ini.
+          </p>
+        </div>
+        <a class="button secondary" href="index.html#prediksi">Prediksi Baru</a>
+      </section>
+
+      <section class="history-table-section" aria-live="polite">
+        <div class="accuracy-panel">
+          <div>
+            <p class="eyebrow">Evaluasi</p>
+            <h2>Akurasi Prediksi</h2>
+            <p id="accuracySummary">Belum ada prediksi yang dinilai.</p>
+          </div>
+          <strong id="accuracyPercent">0%</strong>
+          <div class="meter accuracy-meter" aria-label="Persentase prediksi benar">
+            <span id="accuracyBar"></span>
+          </div>
+        </div>
+
+        <div class="card-head">
+          <div>
+            <p class="eyebrow">Data</p>
+            <h2>Riwayat Prediksi</h2>
+          </div>
+          <span class="status-pill" id="historyCount">Memuat</span>
+        </div>
+
+        <div class="history-table-wrap">
+          <table class="history-table">
+            <thead>
+              <tr>
+                <th>Waktu</th>
+                <th>Foto</th>
+                <th>Nama File</th>
+                <th>Hasil</th>
+                <th>Confidence</th>
+                <th>Validasi</th>
+                <th>Aksi</th>
+                <th>Model</th>
+              </tr>
+            </thead>
+            <tbody id="historyTableBody">
+              <tr>
+                <td colspan="8">Memuat riwayat...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="/api/config.js"></script>
+    <script src="history.js"></script>
+  </body>
+</html>
