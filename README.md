@@ -40,6 +40,12 @@ https://<domain-railway-kamu>.up.railway.app/health
 
 ## Environment Vercel
 
+Pada Vercel, set **Root Directory** ke:
+
+```text
+frontend
+```
+
 Set variable berikut di Vercel:
 
 ```bash
