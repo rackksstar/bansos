@@ -17,7 +17,7 @@ from PIL import Image
 import tensorflow as tf
 
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 MODEL_PATH = Path(os.getenv("MODEL_PATH", BASE_DIR / "models" / "model_bansos.h5"))
 HISTORY_PATH = BASE_DIR / "history.json"
 UPLOADS_DIR = BASE_DIR / "uploads"

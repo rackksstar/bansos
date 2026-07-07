@@ -29,7 +29,7 @@ HF_TOKEN=<token-hugging-face>
 Railway akan menjalankan backend dengan:
 
 ```bash
-python app.py
+python backend/app.py
 ```
 
 Endpoint cek backend:
@@ -59,7 +59,7 @@ pip install -r requirements.txt
 Jalankan server:
 
 ```bash
-python app.py
+python backend/app.py
 ```
 
 Buka:

@@ -1,4 +1,4 @@
-app.py
+backend/
 requirements.txt
 runtime.txt
 Procfile
